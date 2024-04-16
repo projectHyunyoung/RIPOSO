@@ -1,0 +1,322 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'SUIT';
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    min-width: 1320px;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+/* header */
+header {
+    background-color: #283248;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.header_in {
+    width: 80%;
+    max-width: 1160px;
+    margin: auto;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+}
+
+.header_in img {
+    display: block;
+}
+
+.nav>li>a {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 30px;
+    color: #fcfcdd;
+}
+.nav>li:hover>a{
+    background-color: #fcfcdd;
+    color: #283248;
+}
+
+.nav > li{
+    position: relative;
+}
+/* 서브메뉴 꾸미기 */
+.nav .sub_bg{
+    position: absolute;
+    width: 100%;
+    height: 230px;
+    background-color: #283248;
+    left: 0;
+    top: 90px;
+    display: none;
+}
+.sub{
+    width: 100%;
+    height: 230px;
+    background-color: #283248;
+    display: none;
+    position: absolute;
+    z-index: 3;
+}
+
+
+.sub li a{
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+.sub a:hover{
+    text-decoration: underline;
+}
+
+.nav li:hover .sub a{
+    color: #283248;
+}
+.nav li:hover .sub{
+  background-color: #fcfcdd;
+}
+strong{
+    width: 100px;
+    height: 2px;
+    display: inline-block;
+    background-color: #283248;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    margin-left: -50px;
+    transform: scaleX(0);
+    transition: all 1s;
+}
+.nav li:hover strong{
+    transform: scaleX(1);
+}
+
+
+
+/* main banner */
+.mb{
+    background: url(./images/sub_menu/new_menu/main_banner.png) no-repeat center center;
+    height: 835px;
+    margin-top: 90px;
+    text-align: center;
+    color: #333;
+}
+.mb h1{
+    padding: 320px 0 30px 0;
+    font-size: 50px;
+}
+
+/* menu */
+.menu{
+    width: 1320px;
+    margin: auto;
+    text-align: center;
+}
+
+.menu h1{
+    font-size: 40px;
+    padding-top: 80px;
+}
+
+/* filter */
+.filter {
+    width: 1320px;
+    margin: auto;
+  }
+
+  .sub_ul {
+    width: 550px;
+    margin: 50px auto;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+  }
+
+  .sub_ul li {
+    flex: 1;
+  }
+
+  .sub_ul li a {
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: 300;
+    background-color: #283248;
+    color: #fcfcdd;
+    border: 1px solid #fff;
+  }
+
+  .filter li a:hover,
+  .filter .active a {
+    background-color: #fcfcdd;
+    color: #283248;
+    font-weight: 500;
+  }
+
+  .filter_content> div {
+    display: none;
+  }
+
+ 
+  .filter_content .filter1{
+    display: block;
+  }
+
+  .main_ul{
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+  }
+
+  .main_ul li{
+    margin-right: 33.33px;
+    margin-bottom: 100px;
+  }
+  .main_ul li:nth-child(4n){
+    margin-right: 0;
+
+  }
+  .main_ul div{
+    border: 1px #ccc solid;
+    border-radius: 80px 80px 0 80px;
+    overflow: hidden;
+    height: 366px;
+    width: 303px;
+    position: relative;
+    box-sizing: border-box;
+  }
+  .main_ul li p{
+    margin-top: 20px;
+  }
+  h4{
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    opacity: 0;
+  }
+
+  .main_ul img{
+    position: absolute; 
+    top: 0;
+    left: 0;
+  }
+
+  .filter1 .main_ul li:hover div{
+    background-color: #FCE7DF;
+    border-color: #FCE7DF;
+  }
+  .filter2 .main_ul li:hover div{
+    background-color: #E5D0A7;
+    border-color: #E5D0A7;
+  }
+  .filter3 .main_ul li:hover div{
+    background-color: #DBE6E1;
+    border-color: #DBE6E1;
+  }
+  .filter4 .main_ul li:hover div{
+    background-color: #F8F1D9;
+    border-color: #F8F1D9;
+  }
+  .filter5 .main_ul li:hover div{
+    background-color: #EEECF9;
+    border-color: #EEECF9;
+  }
+
+  .main_ul li:hover h4{
+    top: 80px;
+    transition: all 0.8s;
+    opacity: 1;
+  }
+
+  .main_ul li:hover img{
+    top: 110px;
+    transition: all 0.8s;
+  }
+
+
+  /* 푸터 */
+footer {
+    background-color: #283248;
+}
+
+.footer_in {
+    width: 1320px;
+    margin: auto;
+    color: #fff;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 45px 0 40px;
+}
+
+.footer_in ul {
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+
+
+}
+
+.footer_in ul li a {
+    color: #fff;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.footer_in ul li a:hover {
+    color: #bbb;
+    text-decoration: underline;
+}
+
+.footer_left img {
+    display: block;
+    padding-bottom: 25px;
+}
+
+.footer_left p {
+    line-height: 2;
+}
+
+.footer_right img {
+    display: inline-block;
+    padding-left: 5px;
+}
+
+.footer_right img:hover {
+    opacity: 0.5;
+}
